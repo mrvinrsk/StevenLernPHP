@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #202020;
+}
+
+:root {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  color: #D3D3D3;
+}
+
+main {
+  width: min(85%, 55rem);
+  margin-inline: auto;
+  margin-block: min(5%, 7.5rem);
+}
+
+/*# sourceMappingURL=global.css.map */

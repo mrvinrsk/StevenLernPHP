@@ -1,14 +1,14 @@
 <?php
 if (isset($_POST['s'])) { // check if form was submitted
-    $send = true;
-    $username = $_POST['USERNAME'];
-    $password = $_POST['PASSWORD'];
+    $send = true;                       // $send is true if form was submitted - standard: true, false if an error is encountered.
+    $username = $_POST['USERNAME'];     // Getting the variables. The names do not have to be upper case.
+    $password = $_POST['PASSWORD'];     // "
 
-    if (!isset($username) || $username == "" || empty($username)) {
+    if (!isset($username) || $username == "" || empty($username)) { // check if username is empty
         $send = false;
         $missingUsername = true;
-    } else {
-        if (strlen($username) < 3) {
+    } else { // if username is not empty...
+        if (strlen($username) < 3) { // check if username is shorter than 3 characters
             $send = false;
             $tooShortUsername = true;
         }
@@ -20,7 +20,7 @@ if (isset($_POST['s'])) { // check if form was submitted
 
     if ($send) {
         // do something
-        unset($username, $password);
+        unset($username, $password); // This has to be done to prevent the variables from being used again.
     }
 }
 ?>
